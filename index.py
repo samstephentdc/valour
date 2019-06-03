@@ -4,15 +4,15 @@ from flask_mail import Mail,Message
 
 
 app=Flask(__name__)
-app.secret_key = 'Valour@2019'
+app.secret_key = '******'
 app.config.update(dict(
     DEBUG = True,
     MAIL_SERVER = 'smtp.gmail.com',
     MAIL_PORT = 587,
     MAIL_USE_TLS = True,
     MAIL_USE_SSL = False,
-    MAIL_USERNAME = 'linudummy@gmail.com',
-    MAIL_PASSWORD = 'zxcvbnmasdfghjklqwertyuiop',
+    MAIL_USERNAME = '******',
+    MAIL_PASSWORD = '********',
 ))
 
 mail = Mail(app)
@@ -35,7 +35,7 @@ def contact():
             return render_template('contact.html', form=form)
         else:
             
-            msg = Message(request.form["subject"], sender = 'linudummy@gmail.com', recipients = ['immanuelsam.t@gmail.com'])
+            msg = Message(request.form["subject"], sender = '****linudummy@gmail.com', recipients = ['*****'])
             data = [request.form["name"] , request.form["email"] ,request.form["message"]]
             s="\n"
             s = s.join(data)
